@@ -1,1 +1,1 @@
-streamlit==0.86.0
+nltk
