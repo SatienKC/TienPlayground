@@ -1,7 +1,9 @@
 import streamlit as st 
 import pandas as pd
 import time
-from nltk.tokenize import word_tokenize
+import nltk
+nltk.download('tokenize')
+# from nltk.tokenize import word_tokenize
 
 
 fruits = [
@@ -488,7 +490,3 @@ if inputfruit:
 if check==False:
     st.write('We don'+'\'t', 'have','that','data')       
             
-
-
-# if textinput:
-#     st.write(textinput,'should be advertised on',df_platform.iloc[i,0],'as',df_content.iloc[j,0])
