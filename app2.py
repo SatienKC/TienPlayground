@@ -1,6 +1,6 @@
 import streamlit as st 
 import pandas as pd
-
+import time
 
 fruits = [
 
@@ -469,23 +469,21 @@ fruits = [
 ]
 
 
-
-
 st.header("fruits marketing helper")
 
 inputfruit = st.text_input("What fruit do you want to sell",)
-
-
-for i in range(0,len(fruits)):
-    if inputfruit in fruits[i].get('Product'):
-        st.write(fruits[i].get('Product'),'Target Customers are',fruits[i].get('Target Customers'),'\n','you can sell or advertising at',fruits[i].get('Channel Platform'),'\n','type of media are',fruits[i].get('Media'),'\n','and key message is',fruits[i].get('Key Message'))
-        # st.write(fruits[i].get('Product'),'Target Customers are',fruits[i].get('Target Customers'))
-        # st.write('you can sell or advertising at',fruits[i].get('Channel Platform'))
-        # st.write('type of media are',fruits[i].get('Media'))
-        # st.write('and key message is',fruits[i].get('Key Message'))
-        break
-else:
-    st.write('We don'+'\'t', 'have',inputfruit,'data')
+time.sleep(1)
+if inputfruit:
+    for i in range(0,len(fruits)):
+        if inputfruit in fruits[i].get('Product'):
+            st.write(fruits[i].get('Product'),'target customers are',fruits[i].get('Target Customers'),'\n','You can sell or advertising at',fruits[i].get('Channel Platform'),'\n','Type of media are',fruits[i].get('Media'),'\n','The key message is',fruits[i].get('Key Message'))
+            # st.write(fruits[i].get('Product'),'Target Customers are',fruits[i].get('Target Customers'))
+            # st.write('you can sell or advertising at',fruits[i].get('Channel Platform'))
+            # st.write('type of media are',fruits[i].get('Media'))
+            # st.write('and key message is',fruits[i].get('Key Message'))
+            break
+    else:
+        st.write('We don'+'\'t', 'have',inputfruit,'data')
 
 
 # if textinput:
