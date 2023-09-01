@@ -1,7 +1,5 @@
 import streamlit as st 
 import pandas as pd
-import nltk_download_utils
-
 import nltk
 nltk.download('tokenize')
 # nltk.download('tokenize')
