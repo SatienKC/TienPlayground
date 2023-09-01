@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd
 import nltk
-nltk.download('tokenize')
+nltk.download('all')
 # nltk.download('tokenize')
 
 from nltk.tokenize import word_tokenize
